@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{237B3851-662C-4F23-B7C1-65330670BBB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LyricEditor</RootNamespace>
+    <AssemblyName>LyricEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CarlsMIDITools, Version=1.0.1233.22614, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LyricEditor\LyricEditor\bin\Debug\CarlsMIDITools.dll</HintPath>
+    </Reference>
+    <Reference Include="GameLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\CSharpClassLibrary\GameLibrary\GameLibrary\bin\Debug\GameLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sanford.Collections, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.Midi\bin\Debug\Sanford.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Midi, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Timers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.Timers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Threading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\CSharpMidiToolkitV5_demo\CSharpMidiToolkitV5_demo\Sanford.Multimedia.Midi\bin\Debug\Sanford.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundAnalysis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\FftGuitarTuner_bin\SoundAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundCapture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ryoga\Desktop\Content Editor Karaoke Idol\FftGuitarTuner_bin\SoundCapture.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DBConnect.cs" />
+    <Compile Include="Classes\DESCryptoHelper.cs" />
+    <Compile Include="Classes\EditorDBConnect.cs" />
+    <Compile Include="Classes\FileManager.cs" />
+    <Compile Include="Classes\FtpClient.cs" />
+    <Compile Include="Classes\MIDIPlayer.cs" />
+    <Compile Include="Classes\Note.cs" />
+    <Compile Include="Classes\PitchBar.cs" />
+    <Compile Include="Classes\RSACryptoHelper.cs" />
+    <Compile Include="Classes\FileTransfer.cs" />
+    <Compile Include="Classes\SaveManager.cs" />
+    <Compile Include="FormCalibrateSoundInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalibrateSoundInput.Designer.cs">
+      <DependentUpon>FormCalibrateSoundInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportMIDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportMIDI.Designer.cs">
+      <DependentUpon>FormImportMIDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibrary.Designer.cs">
+      <DependentUpon>FormLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSong.Designer.cs">
+      <DependentUpon>FormSong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWelcome.Designer.cs">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEditor.Designer.cs">
+      <DependentUpon>UCEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheckBPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheckBPM.designer.cs">
+      <DependentUpon>FormCheckBPM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreview.designer.cs">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCalibrateSoundInput.resx">
+      <DependentUpon>FormCalibrateSoundInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportMIDI.resx">
+      <DependentUpon>FormImportMIDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibrary.resx">
+      <DependentUpon>FormLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSong.resx">
+      <DependentUpon>FormSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWelcome.resx">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEditor.resx">
+      <DependentUpon>UCEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheckBPM.resx">
+      <DependentUpon>FormCheckBPM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreview.resx">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCNoteGraph.resx">
+      <DependentUpon>UCNoteGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UCNoteGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNoteGraph.Designer.cs">
+      <DependentUpon>UCNoteGraph.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat3Inv.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beat4Inv.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

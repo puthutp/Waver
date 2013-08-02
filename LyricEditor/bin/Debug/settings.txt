@@ -1,0 +1,7 @@
+[MIDIVolume]127
+[Volume]50
+[MinimalVolume]0
+[DBServer]175.103.48.140/fidea
+[FTPServer]172.16.1.254
+[FTPUsername]anonymous
+[FTPPassword]anonymous

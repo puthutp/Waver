@@ -1,0 +1,11 @@
+[MIDIVolume]0
+[Volume]0
+[MinimalVolume]0
+[MIDIPlaybackOffset]0
+[DBServer]
+[DBName]
+[DBUsername]
+[DBPassword]
+[FTPServer]
+[FTPUsername]
+[FTPPassword]

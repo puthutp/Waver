@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "waver", "waver\waver.csproj", "{EA5524A2-980A-4312-872F-4A18E6BBDB26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D} = {DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication.Sockets.Core", "Communication.Sockets.Core\Communication.Sockets.Core.csproj", "{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krin", "krin\krin.csproj", "{BC18B6E3-A11E-4F1C-9710-DBF46ED1472A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EA5524A2-980A-4312-872F-4A18E6BBDB26} = {EA5524A2-980A-4312-872F-4A18E6BBDB26}
+		{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D} = {DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricEditor", "LyricEditor\LyricEditor.csproj", "{237B3851-662C-4F23-B7C1-65330670BBB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA5524A2-980A-4312-872F-4A18E6BBDB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5524A2-980A-4312-872F-4A18E6BBDB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5524A2-980A-4312-872F-4A18E6BBDB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5524A2-980A-4312-872F-4A18E6BBDB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7B20D0-B1D4-40E1-AF98-7C4DB3291A8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC18B6E3-A11E-4F1C-9710-DBF46ED1472A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC18B6E3-A11E-4F1C-9710-DBF46ED1472A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC18B6E3-A11E-4F1C-9710-DBF46ED1472A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC18B6E3-A11E-4F1C-9710-DBF46ED1472A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237B3851-662C-4F23-B7C1-65330670BBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237B3851-662C-4F23-B7C1-65330670BBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237B3851-662C-4F23-B7C1-65330670BBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237B3851-662C-4F23-B7C1-65330670BBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
